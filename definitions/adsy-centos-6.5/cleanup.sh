@@ -24,3 +24,5 @@ find /usr/share/i18n/locales -type f ! \( -name "en*" -or -name "translit_*" -or
 localedef --list-archive | grep -v ^en | xargs localedef --delete-from-archive
 mv /usr/lib/locale/locale-archive{,.tmpl}
 /usr/sbin/build-locale-archive
+bash -c "sleep 1; reboot" &
+true
