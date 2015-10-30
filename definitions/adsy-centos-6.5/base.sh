@@ -14,8 +14,7 @@ EOM
 
 # Make ssh faster by not waiting on DNS
 echo "UseDNS no" >> /etc/ssh/sshd_config
-yum -y upgrade
+#yum -y upgrade
 /etc/init.d/sshd stop
-bash -c "sleep 1; reboot" &
-disown
-true
+reboot
+logout
