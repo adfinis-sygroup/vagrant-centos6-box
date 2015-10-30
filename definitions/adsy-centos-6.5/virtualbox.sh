@@ -1,5 +1,5 @@
 # Installing the virtualbox guest additions
-yum -y install gcc make gcc-c++ kernel-devel dkms
+yum -y install gcc make gcc-c++ kernel-devel perl dkms
 VBOX_VERSION=$(cat /home/vagrant/.vbox_version)
 cd /tmp
 mount -o loop /home/vagrant/VBoxGuestAdditions_$VBOX_VERSION.iso /mnt

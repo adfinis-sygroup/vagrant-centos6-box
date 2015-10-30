@@ -1,7 +1,6 @@
 yum -y erase kernel-firmware postfix sendmail slang kernel.x86_64
 yum -y install plymouth grub
 yum -y clean all
-rm -rf /etc/yum.repos.d/{puppetlabs,epel}.repo
 rm -rf VBoxGuestAdditions_*.iso
 
 # Remove traces of mac address from network configuration
