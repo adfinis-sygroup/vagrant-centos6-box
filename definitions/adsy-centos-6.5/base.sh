@@ -14,5 +14,5 @@ EOM
 echo "UseDNS no" >> /etc/ssh/sshd_config
 yum -y upgrade
 /etc/init.d/sshd stop
-shutdown -r 1+
+reboot
 exit 0
