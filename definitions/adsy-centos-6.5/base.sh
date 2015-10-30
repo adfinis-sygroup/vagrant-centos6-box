@@ -1,7 +1,5 @@
 # Base install
-yum -y erase gtk2 libX11 hicolor-icon-theme avahi freetype bitstream-vera-fonts
-yum -y erase kernel-firmware redhat-logos postfix
-yum -y install grub
+yum -y erase kernel-firmware postfix
 sed -i "s/^.*requiretty/#Defaults requiretty/" /etc/sudoers
 
 cat > /etc/yum.repos.d/epel.repo << EOM
@@ -14,7 +12,7 @@ EOM
 
 # Make ssh faster by not waiting on DNS
 echo "UseDNS no" >> /etc/ssh/sshd_config
-#yum -y upgrade
+yum -y upgrade
 /etc/init.d/sshd stop
-reboot
-logout
+shutdown -r 1+
+exit 0

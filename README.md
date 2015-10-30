@@ -14,6 +14,5 @@ manager to build the image.
 Just run the following command in the repository root:
 
     veewee vbox build adsy-centos-6.5
-    # Press enter on the unsupported hardware warning!
     veewee vbox export adsy-centos-6.5
 

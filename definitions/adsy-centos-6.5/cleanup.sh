@@ -1,5 +1,4 @@
-yum -y erase gtk2 libX11 hicolor-icon-theme avahi freetype bitstream-vera-fonts
-yum -y erase kernel-firmware redhat-logos postfix
+yum -y erase kernel-firmware postfix
 yum -y install plymouth grub
 yum -y clean all
 rm -rf /etc/yum.repos.d/{puppetlabs,epel}.repo
@@ -24,5 +23,5 @@ localedef --list-archive | grep -v ^en | xargs localedef --delete-from-archive
 mv /usr/lib/locale/locale-archive{,.tmpl}
 /usr/sbin/build-locale-archive
 /etc/init.d/sshd stop
-reboot
-logout
+shutdown -r 1+
+exit 0
