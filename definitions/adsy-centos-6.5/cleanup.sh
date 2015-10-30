@@ -1,5 +1,6 @@
 yum -y erase gtk2 libX11 hicolor-icon-theme avahi freetype bitstream-vera-fonts
 yum -y erase kernel-firmware redhat-logos postfix
+yum -y erase gcc make gcc-c++ kernel-devel-`uname -r` zlib-devel openssl-devel readline-devel sqlite-devel perl wget dkms nfs-utils
 yum -y install plymouth
 yum -y clean all
 rm -rf /etc/yum.repos.d/{puppetlabs,epel}.repo
