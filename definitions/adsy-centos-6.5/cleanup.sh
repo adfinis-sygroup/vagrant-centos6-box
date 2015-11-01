@@ -12,6 +12,9 @@ rm -rf /usr/share/man/*
 rm -rf /usr/share/info/*
 rm -rf /usr/share/doc/*
 
+# No logos
+rpm -ql redhat-logos | grep -v grub | xargs rm
+
 /etc/init.d/sshd stop
 reboot
 exit 0
