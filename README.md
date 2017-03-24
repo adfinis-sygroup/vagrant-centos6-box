@@ -1,15 +1,15 @@
-#CentOS 6 box for Vagrant (virtualbox)
+# CentOS 6 box for Vagrant (virtualbox)
 
 This repo contain definition files to build a
 [Vagrant](http://www.vagrantup.com) box.
 
-##Dependencies
+## Dependencies
 
 You need to install [Vagrant](http://www.vagrantup.com) and
 [veewee](https://github.com/jedi4ever/veewee) with your favorite package
 manager to build the image.
 
-##Running
+## Running
 
 Just run the following command in the repository root:
 
